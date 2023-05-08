@@ -6,3 +6,10 @@ export const sellerActionReducer = (sellerAction, action) => {
         default: return '';
     }
 }
+
+export const selectedProductReducer = (currentSelectedProduct, action) => {
+    switch (action.type) {
+        case 'SET_SELECTED_PRODUCT': return action.payload.selectedProduct;
+        default: return currentSelectedProduct;
+    }
+}

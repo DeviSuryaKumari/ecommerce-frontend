@@ -16,7 +16,7 @@ export const UserProvider = ({ children }) => {
     );
 }
 
-const userReducer = (user, action) => {
+const userReducer = (currentUser, action) => {
     switch (action.type) {
         case 'LOGIN_USER': {
             return action.payload.user;
@@ -25,7 +25,7 @@ const userReducer = (user, action) => {
             return initialUser;
         }
         default: {
-            return initialUser;
+            return currentUser;
         }
     }
 }
