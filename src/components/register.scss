@@ -1,0 +1,13 @@
+.card {
+    width: 25rem;
+
+    .card-header {
+        border-top-left-radius: 12px !important;
+        border-top-right-radius: 12px !important;
+
+        .card-title {
+            margin-block-start: 4px;
+            margin-block-end: 4px;
+        }
+    }
+}
