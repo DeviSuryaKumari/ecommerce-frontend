@@ -28,7 +28,7 @@ function App() {
     }).then((response) => {
       if (response.ok) {
         response.json().then((result) => {
-          if (localStorageProducts.length !== result.length) {
+          if (localStorageProducts === null || localStorageProducts.length !== result.length) {
             productsDispatch({
               type: 'SET_PRODUCTS',
               payload: {
