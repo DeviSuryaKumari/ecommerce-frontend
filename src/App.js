@@ -10,7 +10,7 @@ import Login from './components/Login';
 import { ToastContainer } from 'react-toastify';
 
 import ManageProducts from './components/ManageProducts';
-import SellerOrders from './components/SellerOrders';
+import AllSellerProducts from './components/AllSellerProducts';
 import AllProducts from './components/AllProducts';
 import { ProductsDispatchContext } from './components/providers/ProductsProvider';
 
@@ -53,7 +53,7 @@ function App() {
         <Route path="register" element={<Register />} />
         <Route path="login" element={<Login />} />
         <Route path="seller/product" element={<ManageProducts />} />
-        <Route path="seller/orders" element={<SellerOrders />} />
+        <Route path="seller/products" element={<AllSellerProducts />} />
         <Route path="products" element={<AllProducts />} />
       </Routes>
     </div>

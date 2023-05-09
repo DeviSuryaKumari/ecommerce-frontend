@@ -51,8 +51,8 @@ const RoleBasedNavLinks = () => {
                     </Link>
                 </li>
                 <li className="header-link-list__item nav-item">
-                    <Link to="/seller/orders" onClick={() => handleSellerAction('SEE_MY_ORDERS')} className="nav-link active">
-                        <b className="text-primary">All Orders</b>
+                    <Link to="/seller/products" onClick={() => handleSellerAction('SEE_MY_ORDERS')} className="nav-link active">
+                        <b className="text-primary">My Products</b>
                     </Link>
                 </li>
             </> :
