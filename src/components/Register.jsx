@@ -16,7 +16,7 @@ const Register = () => {
     const saveUser = async (event) => {
         event.preventDefault();
 
-        let response = await fetch("http://localhost:8080/api/users/register", {
+        let response = await fetch("http://ecommerce-app036.wl.r.appspot.com/api/users/register", {
             method: 'POST',
             headers: {
                 Accept: '*/*',

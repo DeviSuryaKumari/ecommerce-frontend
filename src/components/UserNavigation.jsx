@@ -10,7 +10,7 @@ const UserNavigation = () => {
     const navigate = useNavigate();
 
     const handleLogout = async () => {
-        let response = await fetch("http://localhost:8080/api/users/logout/" + userContext.userId, {
+        let response = await fetch("http://ecommerce-app036.wl.r.appspot.com/api/users/logout/" + userContext.userId, {
             method: 'PUT',
             headers: {
                 Accept: '*/*',

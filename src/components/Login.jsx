@@ -19,7 +19,7 @@ const Login = () => {
 
     const loginAction = (e) => {
         e.preventDefault();
-        fetch("http://localhost:8080/api/users/login", {
+        fetch("http://ecommerce-app036.wl.r.appspot.com/api/users/login", {
             method: "POST",
             headers: {
                 Accept: "*/*",

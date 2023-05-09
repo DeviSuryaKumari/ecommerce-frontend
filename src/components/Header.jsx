@@ -17,7 +17,7 @@ const Header = () => {
                 />
                 <Link to="/" className="navbar-brand">
                     <i>
-                        <b className="text-primary">ECommerce Web Application</b>
+                        <b className="text-primary">BuyFromUs.com</b>
                     </i>
                 </Link>
 

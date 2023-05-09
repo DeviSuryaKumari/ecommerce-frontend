@@ -19,7 +19,7 @@ const RoleBasedNavLinks = () => {
             }
             case 'SEE_MY_ORDERS': {
                 sellerActionDispatch({ type: 'SEE_MY_ORDERS' });
-                // fetch('http://localhost:8080/api/orders/seller/' + userContext.userId, {
+                // fetch('http://ecommerce-app036.wl.r.appspot.com/api/orders/seller/' + userContext.userId, {
                 //     headers: {
                 //         Accept: '*/*',
                 //         'Content-Type': 'application/json'

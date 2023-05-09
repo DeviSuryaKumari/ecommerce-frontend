@@ -18,15 +18,17 @@ function App() {
   const productsDispatch = useContext(ProductsDispatchContext);
 
   useEffect(() => {
-    if (!(JSON.parse(localStorage.getItem('products'))) || JSON.parse(localStorage.getItem('products')).length === 0) {
-      fetch("http://localhost:8080/api/products/", {
-        headers: {
-          Accept: '*/*',
-          'Content-Type': 'application/json'
-        }
-      }).then((response) => {
-        if (response.ok) {
-          response.json().then((result) => {
+    const localStorageProducts = JSON.parse(localStorage.getItem('products'));
+
+    fetch("http://ecommerce-app036.wl.r.appspot.com/api/products/", {
+      headers: {
+        Accept: '*/*',
+        'Content-Type': 'application/json'
+      }
+    }).then((response) => {
+      if (response.ok) {
+        response.json().then((result) => {
+          if (localStorageProducts.length !== result.length) {
             productsDispatch({
               type: 'SET_PRODUCTS',
               payload: {
@@ -34,10 +36,10 @@ function App() {
               }
             });
             localStorage.setItem('products', JSON.stringify(result));
-          });
-        }
-      });
-    }
+          }
+        });
+      }
+    });
   }, []);
 
   return (
