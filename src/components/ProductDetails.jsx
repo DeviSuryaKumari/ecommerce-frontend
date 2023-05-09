@@ -1,11 +1,5 @@
-import { useReducer } from "react";
-import { selectedProductReducer } from "../reducer";
-
-const ProductDetails = () => {
-    // const [selectedProduct, selectedProductDispatch] = useReducer(selectedProductReducer, {});
-
-    // return <div>{selectedProduct.productId}</div>;
-    return <div>devii</div>;
+const ProductDetails = (props) => {
+    return <h1>{props.product.productId}</h1>;
 }
 
 export default ProductDetails;

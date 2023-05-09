@@ -4,10 +4,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.scss';
 import App from './App';
 import { BrowserRouter } from "react-router-dom";
+import { UserProvider } from './components/providers/UserProvider';
+import { ProductsProvider } from './components/providers/ProductsProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter><App /></BrowserRouter>
+    <UserProvider>
+      <ProductsProvider>
+        <BrowserRouter><App /></BrowserRouter>
+      </ProductsProvider>
+    </UserProvider>
   </React.StrictMode>
 );
